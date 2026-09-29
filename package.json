@@ -1,0 +1,19 @@
+{
+  "name": "car-manager-api",
+  "version": "1.0.0",
+  "description": "API REST para gerenciamento de carros — Node.js + MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["cars", "api", "mongodb", "express"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
