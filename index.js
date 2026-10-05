@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
-const carsRouter = require('./routes/cars');
+const garagemRouter = require('./routes/garagem');
 
 const app = express();
 
@@ -15,18 +15,18 @@ app.use(express.json());
 connectDB();
 
 // Rotas
-app.use('/api/cars', carsRouter);
+app.use('/api/garagem', garagemRouter);
 
 // Rota raiz — health check
 app.get('/', (req, res) => {
   res.status(200).json({
-    message: '🚗 Car Manager API está rodando!',
+    message: '🚗 Garagem de Carros API está rodando!',
     endpoints: {
-      listar: 'GET /api/cars',
-      buscar: 'GET /api/cars/:id',
-      criar: 'POST /api/cars',
-      atualizar: 'PUT /api/cars/:id',
-      deletar: 'DELETE /api/cars/:id',
+      listar: 'GET /api/garagem',
+      buscar: 'GET /api/garagem/:id',
+      criar: 'POST /api/garagem',
+      atualizar: 'PUT /api/garagem/:id',
+      deletar: 'DELETE /api/garagem/:id',
     },
   });
 });

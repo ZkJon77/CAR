@@ -1,4 +1,4 @@
-# 📡 API — Car Manager
+# 📡 API — Garagem de Carros
 
 ## Base URL
 
@@ -22,13 +22,13 @@ GET /
 **Resposta 200:**
 ```json
 {
-  "message": "🚗 Car Manager API está rodando!",
+  "message": "🚗 Garagem de Carros API está rodando!",
   "endpoints": {
-    "listar": "GET /api/cars",
-    "buscar": "GET /api/cars/:id",
-    "criar": "POST /api/cars",
-    "atualizar": "PUT /api/cars/:id",
-    "deletar": "DELETE /api/cars/:id"
+    "listar": "GET /api/garagem",
+    "buscar": "GET /api/garagem/:id",
+    "criar": "POST /api/garagem",
+    "atualizar": "PUT /api/garagem/:id",
+    "deletar": "DELETE /api/garagem/:id"
   }
 }
 ```
@@ -38,7 +38,7 @@ GET /
 ### 📋 Listar todos os carros
 
 ```
-GET /api/cars
+GET /api/garagem
 ```
 
 **Resposta 200:**
@@ -63,7 +63,7 @@ GET /api/cars
 ### 🔍 Buscar carro por ID
 
 ```
-GET /api/cars/:id
+GET /api/garagem/:id
 ```
 
 **Parâmetros:**
@@ -93,7 +93,7 @@ GET /api/cars/:id
 ### ➕ Criar carro
 
 ```
-POST /api/cars
+POST /api/garagem
 ```
 
 **Headers:**
@@ -140,7 +140,7 @@ Content-Type: application/json
 ### ✏️ Atualizar carro
 
 ```
-PUT /api/cars/:id
+PUT /api/garagem/:id
 ```
 
 **Headers:**
@@ -178,7 +178,7 @@ Content-Type: application/json
 ### 🗑️ Deletar carro
 
 ```
-DELETE /api/cars/:id
+DELETE /api/garagem/:id
 ```
 
 **Resposta 204:** (Sem conteúdo — sucesso)
@@ -193,7 +193,7 @@ DELETE /api/cars/:id
 ## Códigos de Erro
 
 | Código | Significado                        |
-|--------|------------------------------------|
+|--------|-------------------------------------|
 | 200    | Sucesso (listar, buscar, atualizar) |
 | 201    | Criado com sucesso                 |
 | 204    | Deletado com sucesso (sem body)    |
@@ -207,31 +207,31 @@ DELETE /api/cars/:id
 
 ### Criar um carro
 ```bash
-curl -X POST http://localhost:3000/api/cars \
+curl -X POST http://localhost:3000/api/garagem \
   -H "Content-Type: application/json" \
   -d '{"marca":"Fiat","modelo":"Uno","preco":45000,"foto":"https://exemplo.com/uno.jpg"}'
 ```
 
 ### Listar todos
 ```bash
-curl http://localhost:3000/api/cars
+curl http://localhost:3000/api/garagem
 ```
 
 ### Buscar por ID
 ```bash
-curl http://localhost:3000/api/cars/SEU_ID_AQUI
+curl http://localhost:3000/api/garagem/SEU_ID_AQUI
 ```
 
 ### Atualizar
 ```bash
-curl -X PUT http://localhost:3000/api/cars/SEU_ID_AQUI \
+curl -X PUT http://localhost:3000/api/garagem/SEU_ID_AQUI \
   -H "Content-Type: application/json" \
   -d '{"preco":48000}'
 ```
 
 ### Deletar
 ```bash
-curl -X DELETE http://localhost:3000/api/cars/SEU_ID_AQUI
+curl -X DELETE http://localhost:3000/api/garagem/SEU_ID_AQUI
 ```
 
 ---
@@ -240,17 +240,17 @@ curl -X DELETE http://localhost:3000/api/cars/SEU_ID_AQUI
 
 ### Criar um carro
 ```powershell
-Invoke-RestMethod -Uri "http://localhost:3000/api/cars" -Method POST -ContentType "application/json" -Body '{"marca":"Fiat","modelo":"Uno","preco":45000}'
+Invoke-RestMethod -Uri "http://localhost:3000/api/garagem" -Method POST -ContentType "application/json" -Body '{"marca":"Fiat","modelo":"Uno","preco":45000}'
 ```
 
 ### Listar todos
 ```powershell
-Invoke-RestMethod -Uri "http://localhost:3000/api/cars" -Method GET
+Invoke-RestMethod -Uri "http://localhost:3000/api/garagem" -Method GET
 ```
 
 ### Deletar
 ```powershell
-Invoke-RestMethod -Uri "http://localhost:3000/api/cars/SEU_ID_AQUI" -Method DELETE
+Invoke-RestMethod -Uri "http://localhost:3000/api/garagem/SEU_ID_AQUI" -Method DELETE
 ```
 
 ---
@@ -259,5 +259,5 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/cars/SEU_ID_AQUI" -Method DELE
 
 | Variável       | Descrição                              | Exemplo                                                                  |
 |----------------|----------------------------------------|--------------------------------------------------------------------------|
-| `MONGODB_URI`  | Connection string do MongoDB Atlas     | `mongodb+srv://user:pass@cluster.xxx.mongodb.net/car-manager`           |
+| `MONGODB_URI`  | Connection string do MongoDB Atlas     | `mongodb+srv://user:pass@cluster.xxx.mongodb.net/garagemdecarros`       |
 | `PORT`         | Porta do servidor (padrão: 3000)       | `3000`                                                                   |

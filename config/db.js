@@ -23,7 +23,7 @@ async function connectDB() {
     console.log('✅ MongoDB conectado com sucesso.');
   } catch (error) {
     console.error('❌ Erro ao conectar no MongoDB:', error.message);
-    throw error;
+    console.warn('⚠️ O servidor continuará rodando sem conexão com o banco.');
   }
 }
 

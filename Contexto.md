@@ -1,7 +1,7 @@
-# 📋 Contexto — Car Manager
+# 📋 Contexto — Garagem de Carros
 
 ## Visão Geral
-Sistema web de gerenciamento de carros com API REST (Node.js + MongoDB) e frontend (HTML/CSS/JS).
+Sistema web de gerenciamento de carros (Garagem de Carros) com API REST (Node.js + MongoDB) e frontend (HTML/CSS/JS).
 O backend funciona como API serverless na Vercel e o frontend consome os endpoints para listar, cadastrar, editar e excluir carros.
 
 ## Status Atual
@@ -11,7 +11,7 @@ O backend funciona como API serverless na Vercel e o frontend consome os endpoin
 - ✅ Estrutura completa de pastas (`api/` + `frontend/`)
 - ✅ Conexão MongoDB com cache serverless (`config/db.js`)
 - ✅ Modelo Mongoose com validações (`models/Car.js`)
-- ✅ 5 rotas CRUD com tratamento de erros (`routes/cars.js`)
+- ✅ 5 rotas CRUD com tratamento de erros (`routes/garagem.js`)
 - ✅ Express configurado com CORS, JSON parser, health check (`index.js`)
 - ✅ Configuração Vercel para deploy serverless (`vercel.json`)
 - ✅ Package.json com 4 dependências (express, mongoose, dotenv, cors)

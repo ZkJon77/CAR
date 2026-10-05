@@ -1,11 +1,11 @@
-# 🗺️ Roadmap — Car Manager
+# 🗺️ Roadmap — Garagem de Carros
 
 ## Etapas
 
 - [x] **Etapa 1** — Inicializar projeto e estrutura de pastas
 - [x] **Etapa 2** — Configurar conexão com MongoDB (`config/db.js`)
 - [x] **Etapa 3** — Criar modelo Mongoose (`Car.js`)
-- [x] **Etapa 4** — Implementar rotas CRUD (`routes/cars.js`)
+- [x] **Etapa 4** — Implementar rotas CRUD (`routes/garagem.js`)
 - [x] **Etapa 5** — Configurar Express e entry point (`index.js`)
 - [x] **Etapa 6** — Configurar `vercel.json` para deploy
 - [ ] **Etapa 7** — Testar API com chamadas reais (POST, GET, PUT, DELETE)

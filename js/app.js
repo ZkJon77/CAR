@@ -3,7 +3,7 @@
 // =============================================
 // 🔧 CONFIGURAÇÃO — Altere a URL da API aqui
 // =============================================
-const API_URL = 'http://localhost:3000/api/cars';
+const API_URL = 'http://localhost:3000/api/garagem';
 
 // =============================================
 // 📦 Elementos do DOM
