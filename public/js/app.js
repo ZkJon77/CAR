@@ -124,7 +124,7 @@ async function handleSubmit(e) {
  * Preenche o formulário com os dados do carro para edição.
  */
 function editCar(car) {
-  carIdInput.value = car._id;
+  carIdInput.value = car.id || car._id;
   marcaInput.value = car.marca;
   modeloInput.value = car.modelo;
   precoInput.value = car.preco;
@@ -207,7 +207,7 @@ function renderCars(cars) {
           <button class="btn btn--edit" onclick='editCar(${JSON.stringify(car)})' aria-label="Editar ${escapeHTML(car.modelo)}">
             ✏️ Editar
           </button>
-          <button class="btn btn--delete" onclick='deleteCar("${car._id}", "${escapeHTML(car.modelo)}")' aria-label="Excluir ${escapeHTML(car.modelo)}">
+          <button class="btn btn--delete" onclick='deleteCar("${car.id || car._id}", "${escapeHTML(car.modelo)}")' aria-label="Excluir ${escapeHTML(car.modelo)}">
             🗑️ Excluir
           </button>
         </div>

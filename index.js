@@ -14,8 +14,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname));
 
-// Conectar ao MongoDB antes de iniciar as rotas
-connectDB();
+// Conectar ao MongoDB se a URI estiver presente (senão usa Supabase)
+if (process.env.MONGODB_URI) {
+  connectDB();
+}
 
 // Rotas
 app.use('/api/garagem', garagemRouter);
