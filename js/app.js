@@ -1,9 +1,9 @@
 // app.js — Lógica do frontend (CRUD de carros via fetch)
 
 // =============================================
-// 🔧 CONFIGURAÇÃO — Altere a URL da API aqui
+// 🔧 CONFIGURAÇÃO — URL da API (relativa para funcionar local e na Vercel)
 // =============================================
-const API_URL = 'http://localhost:3000/api/garagem';
+const API_URL = '/api/garagem';
 
 // =============================================
 // 📦 Elementos do DOM
