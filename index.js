@@ -1,5 +1,6 @@
 // index.js — Entry point do Express
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
@@ -10,6 +11,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
 // Conectar ao MongoDB antes de iniciar as rotas
 connectDB();
@@ -17,8 +19,13 @@ connectDB();
 // Rotas
 app.use('/api/garagem', garagemRouter);
 
-// Rota raiz — health check
+// Rota raiz — serve o frontend index.html
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Rota status da API
+app.get('/api/status', (req, res) => {
   res.status(200).json({
     message: '🚗 Garagem de Carros API está rodando!',
     endpoints: {
