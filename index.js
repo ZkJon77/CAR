@@ -11,6 +11,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname));
 
 // Conectar ao MongoDB antes de iniciar as rotas
@@ -21,7 +22,7 @@ app.use('/api/garagem', garagemRouter);
 
 // Rota raiz — serve o frontend index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Rota status da API
